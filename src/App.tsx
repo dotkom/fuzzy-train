@@ -1,18 +1,32 @@
-import * as style from 'assets/scss/App.scss';
+import 'assets/scss/App.scss';
 import * as React from 'react';
 
-import logo from 'assets/images/logo.svg';
+import { createBrowserHistory, createHashHistory, History } from 'history';
+
+import { Router } from 'react-router-dom';
+import { Incorporations, Students } from './views/info';
+import Intro from './views/Intro';
+
+let history: History;
+
+switch (process.env.RUN_ENV) {
+  case 'BROWSER':
+    history = createHashHistory();
+    break;
+  default:
+    history = createBrowserHistory();
+}
 
 class App extends React.Component {
   public render() {
     return (
-      <div className={style.app}>
-        <header className={style.appHeader}>
-          <img src={logo} className={style.appLogo} alt="logo" />
-          <h1 className={style.appTitle}>Welcome to React</h1>
-        </header>
-        <p className={style.appIntro}>༼ ºل͟º༼ ºل͟º༼ ºل͟º༼ ºل͟º ༽ºل͟º ༽ºل͟º ༽</p>
-      </div>
+      <Router history={history}>
+        <div>
+          <Intro />
+          <Incorporations />
+          <Students />
+        </div>
+      </Router>
     );
   }
 }
