@@ -14,7 +14,7 @@ pipeline:
     when:
       event: [push, pull_request, tag, deployment]
     commands:
-      - yarn
+      - npm install
 
   lint:
     group: testing
@@ -22,7 +22,7 @@ pipeline:
     when:
       event: [push, pull_request, tag, deployment]
     commands:
-      - yarn lint
+      - npm run lint
 
   build:
     group: testing
@@ -30,7 +30,7 @@ pipeline:
     when:
       event: [push, pull_request, tag, deployment]
     commands:
-      - yarn build
+      - npm run build
 
   rebuild-cache:
     image: drillster/drone-volume-cache
