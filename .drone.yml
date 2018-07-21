@@ -9,6 +9,13 @@ pipeline:
     volumes:
       - /tmp/cache:/cache
 
+  lint:
+    image: node:8-alpine
+    when:
+      event: [push, pull_request, tag, deployment]
+    commands:
+      - yarn lint
+
   build:
     image: node:8-alpine
     when:
