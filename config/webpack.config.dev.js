@@ -142,7 +142,6 @@ module.exports = {
           },
           {
             test: /\.(js|jsx|mjs|ts|tsx)$/,
-            include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
               
