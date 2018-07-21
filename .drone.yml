@@ -10,6 +10,7 @@ pipeline:
       - /tmp/cache:/cache
 
   lint:
+    group: testing
     image: node:8-alpine
     when:
       event: [push, pull_request, tag, deployment]
@@ -17,6 +18,7 @@ pipeline:
       - yarn lint
 
   build:
+    group: testing
     image: node:8-alpine
     when:
       event: [push, pull_request, tag, deployment]
