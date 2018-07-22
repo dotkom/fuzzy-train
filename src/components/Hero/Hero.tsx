@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, Logo } from 'src/components';
+import { Button, Divider, Logo } from 'src/components';
 import * as style from './Hero.scss';
 
 export const Hero = () => {
@@ -15,10 +15,11 @@ export const Hero = () => {
         <p>Trykk under for å lære mer om siden vår</p>
       </div>
       <div className={style.buttons}>
-        <Button handleClick={handleClick} text="Bedrift" />
-        <Button handleClick={handleClick} text="Hovedside" />
-        <Button handleClick={handleClick} text="Student" />
+        <Button onClick={handleClick} text="Bedrift" />
+        <Button onClick={handleClick} text="Hovedside" />
+        <Button onClick={handleClick} text="Student" />
       </div>
+      <Divider style={{ width: '100%' }} />
     </div>
   );
 };

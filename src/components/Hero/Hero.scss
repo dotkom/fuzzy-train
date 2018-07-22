@@ -22,7 +22,7 @@
   justify-content: center;
   margin-top: 100px;
 
-  & > div:not(:first-child) {
+  & > button:not(:first-child) {
     margin-left: 150px;
   }
 }
