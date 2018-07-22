@@ -1,12 +1,13 @@
 .button {
-  color: white;
-  border: 1px solid transparent;
-  border-bottom-color: white;
+  color: rgba(255, 255, 255, 0.2);
+  display: block;
+  //border: 1px solid transparent;
+  //border-bottom-color: white;
   padding: 10px 30px;
   transition: border 0.25s;
 
-  &:hover {
-    border-color: white;
-    cursor: pointer;
+  &:hover,
+  &:focus {
+    color: white;
   }
 }

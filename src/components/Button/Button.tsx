@@ -1,18 +1,16 @@
 import * as React from 'react';
 import * as style from './Button.scss';
 
-interface IOwnProps {
-  handleClick: () => void;
+export interface IButtonProps {
+  onClick: () => void;
   text: string;
 }
 
-type IProps = IOwnProps;
-
-export const Button = (props: IProps) => {
-  const { handleClick, text } = props;
+export const Button = (props: IButtonProps) => {
+  const { onClick, text } = props;
   return (
-    <div className={style.button} onClick={handleClick}>
+    <button className={style.button} onClick={onClick}>
       {text}
-    </div>
+    </button>
   );
 };
