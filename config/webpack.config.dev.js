@@ -113,7 +113,6 @@ module.exports = {
     ],
   },
   module: {
-    strictExportPresence: true,
     rules: [
       // TODO: Disable require.ensure as it's not a standard language feature.
       // We are waiting for https://github.com/facebookincubator/create-react-app/issues/2176.
@@ -142,28 +141,12 @@ module.exports = {
             },
           },
           {
-            test: /\.(js|jsx|mjs)$/,
-            include: paths.appSrc,
+            test: /\.(js|jsx|mjs|ts|tsx)$/,
             loader: require.resolve('babel-loader'),
             options: {
               
               compact: true,
             },
-          },
-
-          // Compile .tsx?
-          {
-            test: /\.(ts|tsx)$/,
-            include: paths.appSrc,
-            use: [
-              {
-                loader: require.resolve('ts-loader'),
-                options: {
-                  // disable type checker - we will use it in fork plugin
-                  transpileOnly: true,
-                },
-              },
-            ],
           },
           {
             test: /\.scss$/,
