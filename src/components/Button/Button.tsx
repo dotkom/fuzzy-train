@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as style from './Button.scss';
 
-export interface IButtonProps {
+interface IButtonProps {
   onClick: () => void;
   text: string;
 }

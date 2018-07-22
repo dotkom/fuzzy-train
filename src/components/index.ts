@@ -7,5 +7,5 @@ export { Button } from './Button/Button';
 export { Hero } from './Hero/Hero';
 export { Logo } from './Hero/Logo';
 
-export { Divider } from './Divider/Divider';
 export { Tabs } from './Tabs/Tabs';
+export { Indicator } from './Tabs/Indicator';

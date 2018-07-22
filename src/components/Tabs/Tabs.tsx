@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, Divider } from 'src/components';
+import { Button, Indicator } from 'src/components';
 import * as style from './Tabs.scss';
 
 interface IState {
@@ -23,7 +23,7 @@ export class Tabs extends React.Component<{}, IState> {
           <Button onClick={this.handleClick} text="Hovedside" />
           <Button onClick={this.handleClick} text="Student" />
         </div>
-        <Divider style={{ width: '100%' }} />
+        <Indicator />
       </div>
     );
   }
