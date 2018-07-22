@@ -1,4 +1,4 @@
-.button {
+.tab {
   display: block;
   color: rgba(255, 255, 255, 0.2);
   font-weight: 300;
@@ -10,4 +10,8 @@
     color: white;
     cursor: pointer;
   }
+}
+
+.selected {
+  color: white;
 }

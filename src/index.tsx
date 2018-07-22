@@ -1,6 +1,4 @@
-import 'assets/scss/index.scss';
 import 'assets/style/global.scss';
-
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
