@@ -1,0 +1,170 @@
+.universe {
+  z-index: 1;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.galaxy {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: rotateX(75deg);
+  transform-style: preserve-3d;
+}
+
+.sun,
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  margin-left: -0.5em;
+  border-radius: 50%;
+}
+
+.sun {
+  background-color: #fb7209;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0 0 60px rgba(255, 160, 60, 0.4);
+  transform: rotateX(-75deg);
+}
+
+.pos {
+  position: absolute;
+  top: 50%;
+
+  /* animation-name: invert; */
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.planet {
+  background-color: #202020;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  transform: rotateX(-75deg);
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation-name: orbit;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+/* Animations */
+@keyframes orbit {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+@keyframes invert {
+  0% {
+    transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
+/* Orbit sizes */
+.orbit {
+  width: 18em;
+  height: 18em;
+  margin-top: -9em;
+  margin-left: -9em;
+}
+
+/* Planet starting positions */
+.pos {
+  left: 50%;
+  top: -1px;
+  border: solid 3px red;
+}
+
+/* Planet animation durations */
+.orbit,
+.pos {
+  animation-duration: 2.89016s;
+}
+
+/* Planet sizes */
+.sun {
+  font-size: 12em;
+}
+
+.planet {
+  font-size: 3em;
+}
+
+/* Planet shadow animations */
+.planet {
+  animation-name: shadow-mercury;
+  animation-duration: 2.89016s;
+}
+
+@keyframes shadow-mercury {
+  0% {
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+
+    /* TOP */
+  }
+
+  25% {
+    box-shadow: inset 16px 0 8px rgba(0, 0, 0, 0.5);
+
+    /* LEFT */
+  }
+
+  50% {
+    box-shadow: inset 40px -20px 16px rgba(0, 0, 0, 0.5);
+
+    /* BOTTOM */
+  }
+
+  50.01% {
+    box-shadow: inset -40px -20px 16px rgba(0, 0, 0, 0.5);
+
+    /* BOTTOM */
+  }
+
+  75% {
+    box-shadow: inset -16px 0 8px rgba(0, 0, 0, 0.5);
+
+    /* RIGHT */
+  }
+
+  100% {
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+
+    /* TOP */
+  }
+}
+
+.sun {
+  background-image: linear-gradient(to left, green 50%, #120303 100%);
+}
+
+.planet {
+  background-image: linear-gradient(to left, #a80d15 50%, #120303 100%);
+}
