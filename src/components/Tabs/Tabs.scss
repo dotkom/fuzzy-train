@@ -1,0 +1,15 @@
+@import 'src/assets/style/constants';
+
+.tabs {
+  position: relative;
+  margin-top: 100px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+
+  & > div:not(:first-child) {
+    margin-left: 150px;
+  }
+}
