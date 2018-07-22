@@ -1,0 +1,17 @@
+.tab {
+  display: block;
+  color: rgba(255, 255, 255, 0.2);
+  font-weight: 300;
+  position: relative;
+  transition: border 0.25s;
+  padding: 15px 30px;
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.selected {
+  color: white;
+}

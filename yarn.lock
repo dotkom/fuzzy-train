@@ -602,10 +602,6 @@
     lodash "^4.17.5"
     to-fast-properties "^2.0.0"
 
-"@dotkomonline/react-components@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@dotkomonline/react-components/-/react-components-2.0.0.tgz#f46d1019d0da7345a91eeda98492ac04879f5f99"
-
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"

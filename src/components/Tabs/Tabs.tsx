@@ -1,29 +1,63 @@
 import * as React from 'react';
-import { Button, Indicator } from 'src/components';
+import { Indicator, Tab } from 'src/components';
 import * as style from './Tabs.scss';
 
 interface IState {
-  selectedButton: number;
+  selectedTab: number;
 }
 
 export class Tabs extends React.Component<{}, IState> {
   public state = {
-    selectedButton: 1,
+    selectedTab: 1,
   };
-  public handleClick = () => {
+  public handleClick = (tabIndex: number) => {
     this.setState({
-      selectedButton: 0,
+      selectedTab: tabIndex,
     });
   };
   public render() {
+    const { selectedTab } = this.state;
     return (
       <div className={style.tabs}>
         <div className={style.buttons}>
-          <Button onClick={this.handleClick} text="Bedrift" />
-          <Button onClick={this.handleClick} text="Hovedside" />
-          <Button onClick={this.handleClick} text="Student" />
+          <Tab
+            tabIndex={0}
+            selectedTab={selectedTab}
+            onClick={this.handleClick}
+            text="Budent"
+          />
+          <Tab
+            tabIndex={1}
+            selectedTab={selectedTab}
+            onClick={this.handleClick}
+            text="Budent"
+          />
+          <Tab
+            tabIndex={2}
+            selectedTab={selectedTab}
+            onClick={this.handleClick}
+            text="Budent"
+          />
+          <Tab
+            tabIndex={3}
+            selectedTab={selectedTab}
+            onClick={this.handleClick}
+            text="Budent"
+          />
+          <Tab
+            tabIndex={4}
+            selectedTab={selectedTab}
+            onClick={this.handleClick}
+            text="Budent"
+          />
+          <Tab
+            tabIndex={5}
+            selectedTab={selectedTab}
+            onClick={this.handleClick}
+            text="Budent"
+          />
         </div>
-        <Indicator />
+        <Indicator selectedTab={selectedTab} tabAmount={6} />
       </div>
     );
   }
