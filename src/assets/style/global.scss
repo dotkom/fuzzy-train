@@ -13,6 +13,19 @@ body {
   color: $textColor;
 }
 
+:global #root {
+  height: 100%;
+}
+
 p {
   margin: 0;
+}
+
+:global #canvasDiv {
+  display: flex;
+
+  canvas {
+    display: inline-block;
+    align-self: flex-end;
+  }
 }
