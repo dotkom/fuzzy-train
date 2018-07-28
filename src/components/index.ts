@@ -1,12 +1,14 @@
 export { App } from './App/App';
 
-// Common
-export { TextChunk } from './TextChunk/TextChunk';
+// Header
+export { Header } from './Header/Header';
+export { Logo } from './Header/Logo';
 
-// Content
-export { Hero } from './Hero/Hero';
-export { Logo } from './Hero/Logo';
-
+// Tabs
 export { Tabs } from './Tabs/Tabs';
 export { Tab } from './Tabs/Tab';
 export { Indicator } from './Tabs/Indicator';
+
+// Content
+export { Content } from './Content/Content';
+export { Chunk } from './Content/Chunk';
