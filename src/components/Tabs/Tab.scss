@@ -1,11 +1,15 @@
+$tabFontSize: 24px;
+$tabVerticalPadding: $tabFontSize / 2;
+$tabHorizontalPadding: $tabFontSize;
+
 .tab {
   display: block;
   color: rgba(255, 255, 255, 0.2);
-  font-size: 24px;
+  font-size: $tabFontSize;
   font-weight: 300;
   position: relative;
   transition: border 0.25s;
-  padding: 30px 50px;
+  padding: $tabVerticalPadding $tabHorizontalPadding;
 
   &:hover {
     color: white;

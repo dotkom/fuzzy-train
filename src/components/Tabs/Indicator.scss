@@ -3,5 +3,10 @@
 .indicator {
   border: none;
   height: 2px;
-  background: linear-gradient(to right, transparent, $purple, transparent);
+  background: linear-gradient(
+    to right,
+    rgba($purple, 0.25),
+    $purple,
+    rgba($purple, 0.25)
+  );
 }
