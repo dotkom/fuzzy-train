@@ -3,10 +3,16 @@
 .tabs {
   position: relative;
   margin-top: 100px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
 }
 
 .buttons {
   display: flex;
   justify-content: space-between;
-  width: 1150px;
+}
+
+.content {
+  margin-top: 150px;
 }

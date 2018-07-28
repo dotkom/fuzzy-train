@@ -5,18 +5,18 @@ import * as style from './Tab.scss';
 interface IProps {
   onClick: (tabIndex: number) => void;
   selectedTab: number;
-  tabIndex: number;
+  tabId: number;
   text: string;
 }
 
 export const Tab = (props: IProps) => {
-  const { onClick, selectedTab, tabIndex, text } = props;
+  const { onClick, selectedTab, tabId, text } = props;
   const onClickWrapper = () => {
-    onClick(tabIndex);
+    onClick(tabId);
   };
   const tabClasses = classNames({
     [style.tab]: true,
-    [style.selected]: selectedTab === tabIndex,
+    [style.selected]: selectedTab === tabId,
   });
   return (
     <button className={tabClasses} onClick={onClickWrapper}>
