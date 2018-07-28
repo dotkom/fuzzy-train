@@ -17,4 +17,8 @@ $tabHorizontalPadding: $tabFontSize;
 
 .selected {
   color: white;
+
+  &:hover {
+    cursor: inherit;
+  }
 }

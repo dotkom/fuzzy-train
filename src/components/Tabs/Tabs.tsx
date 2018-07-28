@@ -1,10 +1,12 @@
 import * as React from 'react';
-import { Indicator, Tab, TextChunk } from 'src/components';
-import { ITab } from 'src/types';
+import { Indicator, Tab } from 'src/components';
+import { IChunk } from 'src/types';
 import * as style from './Tabs.scss';
 
 interface IProps {
-  tabs: ITab[];
+  handleClick: (id: number) => void;
+  selectedTabId: number;
+  tabs: IChunk[];
 }
 
 interface IState {
@@ -12,17 +14,8 @@ interface IState {
 }
 
 export class Tabs extends React.Component<IProps, IState> {
-  public state = {
-    selectedTab: 0,
-  };
-  public handleClick = (tabIndex: number) => {
-    this.setState({
-      selectedTab: tabIndex,
-    });
-  };
   public render() {
-    const { tabs } = this.props;
-    const { selectedTab } = this.state;
+    const { handleClick, selectedTabId, tabs } = this.props;
     return (
       <div className={style.tabs}>
         <div className={style.buttons}>
@@ -30,19 +23,13 @@ export class Tabs extends React.Component<IProps, IState> {
             <Tab
               key={id}
               tabId={id}
-              selectedTab={selectedTab}
-              onClick={this.handleClick}
+              selectedTabId={selectedTabId}
+              onClick={handleClick}
               text={t.heading}
             />
           ))}
         </div>
         <Indicator />
-        <div className={style.content}>
-          <TextChunk
-            heading={tabs[selectedTab].heading}
-            paragraphs={tabs[selectedTab].content}
-          />
-        </div>
       </div>
     );
   }

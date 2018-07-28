@@ -1,12 +1,12 @@
 import * as React from 'react';
-import * as style from './TextChunk.scss';
+import * as style from './Chunk.scss';
 
 interface IProps {
   heading: string;
   paragraphs: string[];
 }
 
-export const TextChunk = (props: IProps) => {
+export const Chunk = (props: IProps) => {
   const { heading, paragraphs } = props;
   return (
     <div className={style.container}>

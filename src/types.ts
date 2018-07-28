@@ -1,4 +1,4 @@
-export interface ITab {
+export interface IChunk {
   heading: string;
   content: string[];
 }
