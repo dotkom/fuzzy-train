@@ -1,0 +1,24 @@
+$tabFontSize: 24px;
+$tabVerticalPadding: $tabFontSize / 2;
+$tabHorizontalPadding: $tabFontSize;
+
+.tab {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: $tabFontSize;
+  font-weight: 300;
+  transition: border 0.25s;
+  padding: $tabVerticalPadding $tabHorizontalPadding;
+
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
+}
+
+.selected {
+  color: white;
+
+  &:hover {
+    cursor: inherit;
+  }
+}

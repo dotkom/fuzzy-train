@@ -1,0 +1,17 @@
+@import 'src/assets/style/constants';
+
+.tabs {
+  max-width: $contentWidth;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.buttons {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+.content {
+  margin-top: 150px;
+}

@@ -1,4 +1,5 @@
-@import 'sanitize.css';
+@import 'constants.scss';
+@import 'reset.css';
 
 html,
 body {
@@ -9,6 +10,7 @@ body {
   height: 3000px;
   background: linear-gradient(to bottom, #001533 50%, #7fc0ef 75%);
   font-family: 'Open Sans', sans-serif;
+  color: $textColor;
 }
 
 p {

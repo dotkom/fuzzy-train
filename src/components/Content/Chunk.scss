@@ -1,0 +1,26 @@
+@import 'src/assets/style/constants';
+
+$headingFontSize: 36px;
+$headingSpacing: $headingFontSize / 2;
+
+$contentFontSize: 24px;
+
+.heading {
+  font-size: $headingFontSize;
+  margin: 0;
+  width: 100%;
+  color: $orange;
+  padding-bottom: $headingSpacing;
+  border-bottom: 1px solid $gray;
+  margin-bottom: $headingSpacing;
+}
+
+.content {
+  font-size: $contentFontSize;
+  white-space: pre-line;
+
+  p {
+    line-height: 1.25;
+    margin-bottom: 20px;
+  }
+}
