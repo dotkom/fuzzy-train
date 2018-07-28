@@ -1,12 +1,17 @@
 import * as React from 'react';
 import { Indicator, Tab } from 'src/components';
+import { ITab } from 'src/types';
 import * as style from './Tabs.scss';
+
+interface IProps {
+  tabs: ITab[];
+}
 
 interface IState {
   selectedTab: number;
 }
 
-export class Tabs extends React.Component<{}, IState> {
+export class Tabs extends React.Component<IProps, IState> {
   public state = {
     selectedTab: 0,
   };
@@ -16,27 +21,23 @@ export class Tabs extends React.Component<{}, IState> {
     });
   };
   public render() {
-    const tabText = [
-      'Organisasjonen',
-      'Komiteer',
-      'Andre sosiale verv',
-      'Annet',
-    ];
+    const { tabs } = this.props;
     const { selectedTab } = this.state;
     return (
       <div className={style.tabs}>
         <div className={style.buttons}>
-          {tabText.map((t, id) => (
+          {tabs.map((t, id) => (
             <Tab
               key={id}
               tabId={id}
               selectedTab={selectedTab}
               onClick={this.handleClick}
-              text={t}
+              text={t.text}
             />
           ))}
         </div>
         <Indicator />
+        {tabs[selectedTab].content}
       </div>
     );
   }
