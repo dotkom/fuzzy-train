@@ -1,4 +1,7 @@
+@import 'src/assets/style/constants';
+
 .indicator {
   border: none;
   height: 2px;
+  background: linear-gradient(to right, transparent, $purple, transparent);
 }

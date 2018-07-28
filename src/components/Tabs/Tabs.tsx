@@ -8,7 +8,7 @@ interface IState {
 
 export class Tabs extends React.Component<{}, IState> {
   public state = {
-    selectedTab: 1,
+    selectedTab: 0,
   };
   public handleClick = (tabIndex: number) => {
     this.setState({
@@ -16,48 +16,27 @@ export class Tabs extends React.Component<{}, IState> {
     });
   };
   public render() {
+    const tabText = [
+      'Organisasjonen',
+      'Komiteer',
+      'Andre sosiale verv',
+      'Annet',
+    ];
     const { selectedTab } = this.state;
     return (
       <div className={style.tabs}>
         <div className={style.buttons}>
-          <Tab
-            tabIndex={0}
-            selectedTab={selectedTab}
-            onClick={this.handleClick}
-            text="Budent"
-          />
-          <Tab
-            tabIndex={1}
-            selectedTab={selectedTab}
-            onClick={this.handleClick}
-            text="Budent"
-          />
-          <Tab
-            tabIndex={2}
-            selectedTab={selectedTab}
-            onClick={this.handleClick}
-            text="Budent"
-          />
-          <Tab
-            tabIndex={3}
-            selectedTab={selectedTab}
-            onClick={this.handleClick}
-            text="Budent"
-          />
-          <Tab
-            tabIndex={4}
-            selectedTab={selectedTab}
-            onClick={this.handleClick}
-            text="Budent"
-          />
-          <Tab
-            tabIndex={5}
-            selectedTab={selectedTab}
-            onClick={this.handleClick}
-            text="Budent"
-          />
+          {tabText.map((t, id) => (
+            <Tab
+              key={id}
+              tabId={id}
+              selectedTab={selectedTab}
+              onClick={this.handleClick}
+              text={t}
+            />
+          ))}
         </div>
-        <Indicator selectedTab={selectedTab} tabAmount={6} />
+        <Indicator />
       </div>
     );
   }
