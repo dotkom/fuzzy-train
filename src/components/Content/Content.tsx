@@ -4,7 +4,7 @@ import { IChunk } from 'src/types';
 import * as style from './Content.scss';
 
 interface IProps {
-  selectedChunks: IChunk;
+  selectedChunks: IChunk | null;
 }
 
 export const Content = (props: IProps) => {
@@ -12,8 +12,8 @@ export const Content = (props: IProps) => {
   return (
     <div className={style.content}>
       <Chunk
-        heading={selectedChunks.heading}
-        paragraphs={selectedChunks.content}
+        heading={selectedChunks ? selectedChunks.heading : 'Laster...'}
+        content={selectedChunks ? selectedChunks.content : ''}
       />
     </div>
   );
