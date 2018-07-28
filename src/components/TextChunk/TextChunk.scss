@@ -17,4 +17,10 @@ $contentFontSize: 24px;
 
 .content {
   font-size: $contentFontSize;
+  white-space: pre-line;
+
+  p {
+    line-height: 1.25;
+    margin-bottom: 20px;
+  }
 }
