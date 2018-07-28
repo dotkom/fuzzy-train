@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Content, Header, Tabs } from 'src/components';
-import { CHUNKS_API, HARD_DATA } from 'src/constants';
+import { CHUNKS_API, HARD_DATA, STUDENT_TABS } from 'src/constants';
 import { IChunk } from 'src/types';
 import * as style from './App.scss';
 
@@ -11,12 +11,12 @@ interface IState {
 
 export class App extends React.Component<{}, IState> {
   public state = {
-    chunks: new Map(),
+    chunks: new Map(Object.entries(HARD_DATA)),
     selectedTabId: 0,
   };
-  public handleClick = (index: number) => {
+  public handleClick = (id: number) => {
     this.setState({
-      selectedTabId: index,
+      selectedTabId: id,
     });
   };
 
@@ -30,11 +30,15 @@ export class App extends React.Component<{}, IState> {
       <div className={style.app}>
         <Header />
         <Tabs
-          tabs={HARD_DATA}
+          tabs={STUDENT_TABS}
           selectedTabId={selectedTabId}
           handleClick={this.handleClick}
         />
-        <Content selectedChunks={chunks.get('chunk_key')} />
+        <Content
+          selectedChunks={STUDENT_TABS[selectedTabId].chunks.map(
+            chunk => chunks.get(chunk) as IChunk
+          )}
+        />
       </div>
     );
   }
