@@ -1,0 +1,17 @@
+@import 'src/assets/style/constants';
+
+$headingSpacing: 25px;
+
+.heading {
+  font-size: 48px;
+  margin: 0;
+  width: 100%;
+  color: $orange;
+  padding-bottom: $headingSpacing;
+  border-bottom: 1px solid $gray;
+  margin-bottom: $headingSpacing + 5px;
+}
+
+.content {
+  font-size: 36px;
+}

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Indicator, Tab } from 'src/components';
+import { Indicator, Tab, TextChunk } from 'src/components';
 import { ITab } from 'src/types';
 import * as style from './Tabs.scss';
 
@@ -32,12 +32,17 @@ export class Tabs extends React.Component<IProps, IState> {
               tabId={id}
               selectedTab={selectedTab}
               onClick={this.handleClick}
-              text={t.text}
+              text={t.heading}
             />
           ))}
         </div>
         <Indicator />
-        {tabs[selectedTab].content}
+        <div className={style.content}>
+          <TextChunk
+            heading={tabs[selectedTab].heading}
+            paragraphs={tabs[selectedTab].content}
+          />
+        </div>
       </div>
     );
   }

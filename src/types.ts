@@ -1,6 +1,4 @@
-import { ReactNode } from 'react';
-
 export interface ITab {
-  text: string;
-  content: ReactNode;
+  heading: string;
+  content: string[];
 }

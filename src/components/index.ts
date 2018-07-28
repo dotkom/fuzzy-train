@@ -2,6 +2,7 @@ export { App } from './App/App';
 
 // Common
 export { Button } from './Button/Button';
+export { TextChunk } from './TextChunk/TextChunk';
 
 // Content
 export { Hero } from './Hero/Hero';
