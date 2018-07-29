@@ -54,7 +54,7 @@ export class App extends React.Component<{}, IState> {
     const chunks: Map<string, IChunk> = new Map(
       chunksJson.results.map((chunk: IChunkJson) => [
         chunk.key,
-        { content: chunk.content, heading: chunk.description },
+        { content: chunk.content, heading: chunk.description, key: chunk.key },
       ])
     );
     this.setState({
