@@ -10,7 +10,7 @@ pipeline:
       - /tmp/cache:/cache
 
   setup:
-    image: node:8-alpine
+    image: node:9-alpine
     when:
       event: [push, pull_request, tag, deployment]
     commands:
@@ -19,7 +19,7 @@ pipeline:
 
   lint:
     group: testing
-    image: node:8-alpine
+    image: node:9-alpine
     when:
       event: [push, pull_request, tag, deployment]
     commands:
@@ -27,7 +27,7 @@ pipeline:
 
   build:
     group: testing
-    image: node:8-alpine
+    image: node:9-alpine
     when:
       event: [push, pull_request, tag, deployment]
     commands:
