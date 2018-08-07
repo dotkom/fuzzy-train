@@ -10,27 +10,28 @@ pipeline:
       - /tmp/cache:/cache
 
   setup:
-    image: node:8-alpine
+    image: node:9-alpine
     when:
       event: [push, pull_request, tag, deployment]
     commands:
-      - npm install
+      - yarn
+      - npm rebuild node-sass
 
   lint:
     group: testing
-    image: node:8-alpine
+    image: node:9-alpine
     when:
       event: [push, pull_request, tag, deployment]
     commands:
-      - npm run lint
+      - yarn run lint
 
   build:
     group: testing
-    image: node:8-alpine
+    image: node:9-alpine
     when:
       event: [push, pull_request, tag, deployment]
     commands:
-      - npm run build
+      - yarn run build
 
   rebuild-cache:
     image: drillster/drone-volume-cache
