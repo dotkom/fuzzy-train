@@ -1,4 +1,10 @@
 export interface IChunk {
+  content: string;
   heading: string;
-  content: string[];
+  key: string;
+}
+
+export interface ITab {
+  name: string;
+  chunks: string[];
 }

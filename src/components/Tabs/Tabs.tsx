@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Indicator, Tab } from 'src/components';
-import { IChunk } from 'src/types';
+import { ITab } from 'src/types';
 import * as style from './Tabs.scss';
 
 interface IProps {
   handleClick: (id: number) => void;
   selectedTabId: number;
-  tabs: IChunk[];
+  tabs: ITab[];
 }
 
 interface IState {
@@ -25,7 +25,7 @@ export class Tabs extends React.Component<IProps, IState> {
               tabId={id}
               selectedTabId={selectedTabId}
               onClick={handleClick}
-              text={t.heading}
+              text={t.name}
             />
           ))}
         </div>
