@@ -1,0 +1,17 @@
+.svg {
+  width: 100%;
+  height: 1500px;
+  position: absolute;
+  top: -750px;
+  filter: drop-shadow(0 0 10px #731494);
+}
+
+.gradientStart {
+  stop-color: #09254b;
+  stop-opacity: 1;
+}
+
+.gradientStop {
+  stop-color: #731494;
+  stop-opacity: 1;
+}

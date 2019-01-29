@@ -1,8 +1,9 @@
 export { App } from './App/App';
 
-// Header
-export { Header } from './Header/Header';
-export { Logo } from './Header/Logo';
+// Nu
+export { Nu } from './Nu/Nu';
+export { Logo } from './Nu/Logo';
+export { Curve } from './Nu/Curve';
 
 // Tabs
 export { Tabs } from './Tabs/Tabs';

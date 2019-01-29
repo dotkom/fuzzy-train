@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Indicator, Tab } from 'src/components';
+import { Tab } from 'src/components';
 import { ITab } from 'src/types';
 import * as style from './Tabs.scss';
 
@@ -29,7 +29,6 @@ export class Tabs extends React.Component<IProps, IState> {
             />
           ))}
         </div>
-        <Indicator />
       </div>
     );
   }

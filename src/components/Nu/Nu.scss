@@ -1,0 +1,26 @@
+.nu {
+  position: absolute;
+  top: 250px;
+  width: 100%;
+}
+
+.nuTop {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text {
+  font-size: 24px;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+
+  p:last-child {
+    margin-top: 20px;
+  }
+}

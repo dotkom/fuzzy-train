@@ -2,21 +2,34 @@ $tabFontSize: 24px;
 $tabVerticalPadding: $tabFontSize / 2;
 $tabHorizontalPadding: $tabFontSize;
 
+$color: #001533;
+
 .tab {
-  color: rgba(255, 255, 255, 0.2);
+  color: $color;
   font-size: $tabFontSize;
+  border: 1px solid;
+  border-radius: 5px;
   font-weight: 300;
-  transition: border 0.25s;
+  justify-self: center;
+  transition: color 0.25s;
   padding: $tabVerticalPadding $tabHorizontalPadding;
 
   &:hover {
-    color: white;
+    color: lighten($color, 10%);
     cursor: pointer;
+  }
+
+  &:first-child {
+    color: white;
+
+    &:hover {
+      color: darken(white, 10%);
+    }
   }
 }
 
 .selected {
-  color: white;
+  color: $color;
 
   &:hover {
     cursor: inherit;
