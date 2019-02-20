@@ -6,11 +6,11 @@
 }
 
 .orange {
-  fill: $orange;
-  stroke: white;
+  fill: var(--orange);
+  stroke: var(--contrast-color);
   stroke-width: 0.56;
 }
 
 .white {
-  fill: white;
+  fill: var(--contrast-color);
 }

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Content, Header, Tabs } from 'src/components';
+import { Content, Header, Tabs, ToggleTheme } from 'src/components';
 import { CHUNKS_API, HARD_DATA, STUDENT_TABS } from 'src/constants';
 import { IChunk } from 'src/types';
 import * as style from './App.scss';
@@ -28,6 +28,7 @@ export class App extends React.Component<{}, IState> {
     const { selectedTabId, chunks } = this.state;
     return (
       <div className={style.app}>
+        <ToggleTheme />
         <Header />
         <Tabs
           tabs={STUDENT_TABS}

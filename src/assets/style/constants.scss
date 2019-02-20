@@ -6,3 +6,17 @@ $gray: #c4c4c4;
 // Constants
 $textColor: white;
 $contentWidth: 1200px;
+
+:root {
+  --bg-color: white;
+  --orange: #dc942d;
+  --contrast-color: #07244c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #07244c;
+    --orange: #dc942d;
+    --contrast-color: white;
+  }
+}

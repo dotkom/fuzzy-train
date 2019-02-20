@@ -1,0 +1,15 @@
+.buttons {
+  color: var(--contrast-color);
+  background: var(--orange);
+  width: 50px;
+  height: 30px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 50px;
+}

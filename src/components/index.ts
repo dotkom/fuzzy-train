@@ -12,3 +12,6 @@ export { Indicator } from './Tabs/Indicator';
 // Content
 export { Content } from './Content/Content';
 export { Chunk } from './Content/Chunk';
+
+// ToggleTheme
+export { ToggleTheme } from './ToggleTheme/ToggleTheme';

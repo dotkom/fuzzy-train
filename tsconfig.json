@@ -4,7 +4,12 @@
     "outDir": "build/dist",
     "module": "commonjs",
     "target": "esnext",
-    "lib": ["es6", "dom", "es2017.object"],
+    "lib": [
+      "es6",
+      "dom",
+      "es2017.object",
+      "dom.iterable",
+    ],
     "sourceMap": true,
     "allowJs": true,
     "jsx": "react",

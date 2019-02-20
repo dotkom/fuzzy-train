@@ -8,9 +8,9 @@ body {
 
 body {
   height: 3000px;
-  background: linear-gradient(to bottom, #001533 50%, #7fc0ef 75%);
+  background: var(--bg-color);
   font-family: 'Open Sans', sans-serif;
-  color: $textColor;
+  color: var(--contrast-color);
 }
 
 p {
